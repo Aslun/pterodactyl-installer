@@ -69,7 +69,7 @@ output "This script is not associated with the official Pterodactyl Project."
 output
 
 panel() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/$SCRIPT_VERSION/install-panel.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/master/lib/verify-fqdn.sh)
 }
 
 wings() {

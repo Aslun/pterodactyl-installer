@@ -28,7 +28,7 @@ set -e
 #                                                                           #
 #############################################################################
 
-SCRIPT_VERSION="v0.2.0"
+SCRIPT_VERSION="v1.2.0"
 
 # exit with error status code if user is not root
 if [[ $EUID -ne 0 ]]; then
@@ -73,23 +73,23 @@ panel() {
 }
 
 wings() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/$SCRIPT_VERSION/install-wings.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/$SCRIPT_VERSION/install-wings.sh)
 }
 
 legacy_panel() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/$SCRIPT_VERSION/legacy/panel_0.7.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/$SCRIPT_VERSION/legacy/panel_0.7.sh)
 }
 
 legacy_wings() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/$SCRIPT_VERSION/legacy/daemon_0.6.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/$SCRIPT_VERSION/legacy/daemon_0.6.sh)
 }
 
 canary_panel() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/master/install-panel.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/master/install-panel.sh)
 }
 
 canary_wings() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/master/install-wings.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Aslun/pterodactyl-installer/master/install-wings.sh)
 }
 
 while [ "$done" == false ]; do

